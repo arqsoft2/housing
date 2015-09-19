@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+    <body>
+
+        <ui:composition template="./../template/start.xhtml">
+
+            <ui:define name="top">
+                top
+            </ui:define>
+
+            <ui:define name="content">
+                
+                <h:form>
+                <label>Person</label>
+                <br/>
+                <br/>
+                <label>Create a Person</label>
+                <br/>
+                <br/>
+                <label>Name: </label>
+                <h:inputText value="#{createPersonBean.name}" required="true" requiredMessage="Is necessary a name!"/>
+                <br/>
+                <label>Document: </label>
+                <h:inputText value="#{createPersonBean.document}" required="true" requiredMessage="Is necessary a document!"/>
+                <br/>
+                <label>Password: </label>
+                <h:inputSecret value="#{createPersonBean.password}" required="true" requiredMessage="Is necessary a document!"/>
+                <br/>
+                <label> address: </label>
+                <h:inputText value="#{createPersonBean.address}" required="true" requiredMessage="Is necessary a address!"/>
+                <br/>
+                <label> email: </label>
+                <h:inputSecret value="#{createPersonBean.EMail}" required="true" requiredMessage="Is necessary a address!"/>
+                <br/>
+                <label> id Person: </label>
+                <h:inputText value="#{createPersonBean.idperson}" required="true" requiredMessage="Is necessary a address!"/>
+                <br/>
+                <label> Last Name: </label>
+               <h:inputText value="#{createPersonBean.lastName}" required="true" requiredMessage="Is necessary a address!"/>
+                <br/>
+                <label> Phone: </label>
+                <h:inputText value="#{createPersonBean.phone}" required="true" requiredMessage="Is necessary a address!"/>
+                <br/>
+                <label> Profession: </label>
+                <h:inputText value="#{createPersonBean.profession}" required="true" requiredMessage="Is necessary a address!"/>
+                <br/>
+                <label> Profession: </label>
+                <h:inputText value="#{createPersonBean.profession}" required="true" requiredMessage="Is necessary a address!"/>
+                <br/>
+                <label> Rol: </label>
+                <h:inputText value="#{createPersonBean.rol}" required="true" requiredMessage="Is necessary a address!"/>
+                <br/>
+                <label> Salary: </label>
+                <h:inputText value="#{createPersonBean.salary}" required="true" requiredMessage="Is necessary a address!"/>
+                <br/>
+                <label> User: </label>
+                <h:inputText value="#{createPersonBean.user}" required="true" requiredMessage="Is necessary a address!"/>
+                <br/>
+                <h:commandButton action="#{createPersonBean.createPerson()}" value="create"/>
+                
+                <br/>
+                <br/>
+                <label>Message</label>
+                <h:outputText value="#{createPersonBean.message}"/>
+                <br/>
+                <br/>
+               
+                <br/>    
+            </h:form>
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>

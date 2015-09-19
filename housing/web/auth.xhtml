@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+    <body>
+
+        <ui:composition template="/template/start.xhtml">
+
+            <ui:define name="top">
+                top
+            </ui:define>
+
+            <ui:define name="content">
+                
+                <h:form>
+                <label>Person</label>
+                <br/>
+                <br/>
+                <label>Create a Person</label>
+                <br/>
+                 <label> User: </label>
+                <h:inputText value="#{authBean.user}" required="true" requiredMessage="Is necessary a address!"/>
+                <br/>
+                <label>Password: </label>
+                <h:inputSecret value="#{authBean.password}" required="true" requiredMessage="Is necessary a document!"/>
+                <br/>
+                <h:commandButton value="Buscar" action="#{authBean.authPerson()}" />
+                
+                <br/>
+                <br/>
+                <label>Message</label>
+                <h:outputText value="#{authBean.message}"/>
+                <br/>
+                <br/>
+               
+                <br/>    
+            </h:form>
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>
